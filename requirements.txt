@@ -4,3 +4,4 @@ requests
 google-cloud-firestore
 pydantic
 mangum
+uvicorn
