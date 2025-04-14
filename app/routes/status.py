@@ -42,9 +42,9 @@ def update_breakdown_status(
         raise HTTPException(status_code=500, detail=str(e))
 
 @router.get("/get")
-def get_breakdown_status(bus: str = Query(...)):
+def get_breakdown_status(bus_number: str = Query(...)):
     try:
-        doc = db.collection("buses").document(bus).get()
+        doc = db.collection("buses").document(bus_number).get()
         if not doc.exists:
             raise HTTPException(status_code=404, detail="Bus not found")
 
