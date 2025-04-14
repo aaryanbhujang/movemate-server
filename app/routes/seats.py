@@ -54,7 +54,7 @@ def update_seats(
 
 # GET endpoint to retrieve available seats for a specific bus using query parameter
 @router.get("/get")
-def get_seats(bus: str):
+def get_seats(bus_number: str):
     """Retrieve the available seats for a specific bus using query parameter"""
     try:
         # Retrieve the bus document using the bus number as a query parameter
