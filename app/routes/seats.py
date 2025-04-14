@@ -58,7 +58,7 @@ def get_seats(bus_number: str):
     """Retrieve the available seats for a specific bus using query parameter"""
     try:
         # Retrieve the bus document using the bus number as a query parameter
-        bus_ref = db.collection("buses").document(bus)
+        bus_ref = db.collection("buses").document(bus_number)
         bus_data = bus_ref.get()
 
         if not bus_data.exists:
